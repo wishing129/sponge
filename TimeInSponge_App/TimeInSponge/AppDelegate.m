@@ -7,13 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+    ViewController *vc = [[ViewController alloc] initWithNibName:nil bundle:nil];
+   UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+//   UITabBarController *tabBarController = [[UITabBarController alloc] init];
+//   [tabBarController setViewControllers:@[nc, snc]];
+   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+   self.window.rootViewController = nc;
+   self.window.backgroundColor = [UIColor whiteColor];
+   [self.window makeKeyAndVisible];
+   return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
