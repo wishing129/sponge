@@ -39,6 +39,8 @@
 		0C6A784318BA9E8100AF1B42 /* TSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A783718BA9E8000AF1B42 /* TSTableView.m */; };
 		0C6A784418BA9E8100AF1B42 /* TSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A783918BA9E8000AF1B42 /* TSTableViewCell.m */; };
 		0C6A784518BA9E8100AF1B42 /* TSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A783B18BA9E8000AF1B42 /* TSViewController.m */; };
+		0CB4DC1B18BAB1E600E7D2B5 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC1A18BAB1E600E7D2B5 /* bg.png */; };
+		0CB4DC1E18BAB54700E7D2B5 /* cloud_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC1D18BAB54700E7D2B5 /* cloud_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		0C6A783918BA9E8000AF1B42 /* TSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewCell.m; sourceTree = "<group>"; };
 		0C6A783A18BA9E8000AF1B42 /* TSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSViewController.h; sourceTree = "<group>"; };
 		0C6A783B18BA9E8000AF1B42 /* TSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSViewController.m; sourceTree = "<group>"; };
+		0CB4DC1A18BAB1E600E7D2B5 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		0CB4DC1D18BAB54700E7D2B5 /* cloud_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,9 +306,19 @@
 		0CB4DC0D18BAAB4D00E7D2B5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				0CB4DC1C18BAB53E00E7D2B5 /* icons */,
+				0CB4DC1A18BAB1E600E7D2B5 /* bg.png */,
 				0C6A783518BA9E8000AF1B42 /* icon.png */,
 			);
 			name = Image;
+			sourceTree = "<group>";
+		};
+		0CB4DC1C18BAB53E00E7D2B5 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				0CB4DC1D18BAB54700E7D2B5 /* cloud_icon.png */,
+			);
+			name = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +396,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CB4DC1E18BAB54700E7D2B5 /* cloud_icon.png in Resources */,
+				0CB4DC1B18BAB1E600E7D2B5 /* bg.png in Resources */,
 				0C6A784218BA9E8100AF1B42 /* icon.png in Resources */,
 				0C6A77B418B9F3C500AF1B42 /* InfoPlist.strings in Resources */,
 				0C6A784018BA9E8100AF1B42 /* EventBriefInfoTableViewCell.xib in Resources */,

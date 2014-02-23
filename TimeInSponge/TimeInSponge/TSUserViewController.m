@@ -9,6 +9,7 @@
 #import "TSUserViewController.h"
 
 @interface TSUserViewController ()
+@property (nonatomic, strong) UIImageView *bgImageView;
 
 @end
 
@@ -26,7 +27,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self setupUI];
+}
+
+- (void)setupUI {
+    [self createBgImageView];
+}
+
+- (void)createBgImageView {
+    self.bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]];
+    self.bgImageView.center = self.view.center;
+    [self.view addSubview:self.bgImageView];
 }
 
 - (void)didReceiveMemoryWarning

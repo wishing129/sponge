@@ -17,10 +17,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     TSUserViewController *tuvc = [[TSUserViewController alloc] initWithNibName:nil bundle:nil];
     TSViewController *tvc = [[TSViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:tvc];
+    nc.view.backgroundColor = [UIColor whiteColor];
     IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:nc leftViewController:tuvc];
     deckController.panningMode = IIViewDeckFullViewPanning;
     deckController.leftSize = 50;

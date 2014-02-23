@@ -31,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setupModel];
     [self setupUI];
     [self reloadData];
@@ -56,7 +57,7 @@
 #pragma mark - setup UI
 - (void)setupUI {
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self createDatePicker];
+//    [self createDatePicker];
     [self createNavigationBar];
     [self createTableView];
 }
@@ -106,7 +107,7 @@
 #pragma mark - model action handler
 - (void)didSelectTableFromModel:(NSObject *)model rowAtIndexPath:(NSIndexPath *)indexPath {
     if ([model isEqual:self.eventBriefInfoModel]) {
-        EventDetailViewController *edvc = [[EventDetailViewController alloc] initWithNibName:@"EventDetailViewController" bundle:nil];
+        EventDetailViewController *edvc = [[EventDetailViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:edvc animated:NO];
     }
 }
@@ -132,9 +133,6 @@
 }
 
 - (void)serverRequestFailureWith: (NSError *)error{
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:[NSString stringWithFormat:@"%d",[error code]] message: [error localizedDescription] delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-    [alert show];
-    alert = nil;
 }
 
 @end

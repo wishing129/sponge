@@ -17,6 +17,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
     return self.allEvents.count;
 }
 
@@ -27,19 +28,22 @@
         [tableView registerNib:[UINib nibWithNibName:@"EventBriefInfoTableViewCell" bundle:nil] forCellReuseIdentifier:identifier];
         cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     }
-    UIImage *icon = [UIImage imageNamed:@"icon.png"];
-    NSDictionary *event = [self.allEvents objectAtIndex:indexPath.row];
-    cell.icon.contentMode = UIViewContentModeScaleAspectFit;
-    [cell.icon setImage:icon];
-    cell.title.text = [event objectForKey:@"title"];
-    cell.brief.text = [event objectForKey:@"description"];
-//    cell.title.adjustsFontSizeToFitWidth = YES;
-//    cell.brief.adjustsFontSizeToFitWidth = YES;
+    cell.title.text = @"asd asdjha asd asd asd ";
+    cell.brief.text = @"asdoi  sfiu iuhfiu  sdf";
+    cell.icon.hidden = NO;
+//    UIImage *icon = [UIImage imageNamed:@"icon.png"];
+//    NSDictionary *event = [self.allEvents objectAtIndex:indexPath.row];
+//    cell.icon.contentMode = UIViewContentModeScaleAspectFit;
+//    [cell.icon setImage:icon];
+//    cell.title.text = [event objectForKey:@"title"];
+//    cell.brief.text = [event objectForKey:@"description"];
     return cell;
 }
 
 #pragma mark - table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.selected = NO;
     [self.controler didSelectTableFromModel:self rowAtIndexPath:indexPath];
 }
 
