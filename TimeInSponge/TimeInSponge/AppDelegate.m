@@ -2,32 +2,34 @@
 //  AppDelegate.m
 //  TimeInSponge
 //
-//  Created by Jinghan Xu on 2/22/14.
+//  Created by Jinghan Xu on 2/23/14.
 //  Copyright (c) 2014 TimeInSponge.inc. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "TestViewController.h"
+#import "TSUserViewController.h"
 #import "TSViewController.h"
 #import "IIViewDeckController.h"
-#import "UserViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    TSViewController *tvc = [[TSViewController alloc] initWithNibName:nil bundle:nil];
-    UserViewController *uvc = [[UserViewController alloc] initWithNibName:nil bundle:nil];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:tvc];
-    IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:nc leftViewController:uvc];
-   deckController.panningMode = IIViewDeckFullViewPanning;
-   deckController.leftSize = 50;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-   self.window.rootViewController = deckController;
-   self.window.backgroundColor = [UIColor whiteColor];
-   [self.window makeKeyAndVisible];
-   return YES;
+    // Override point for customization after application launch.
+    TSUserViewController *tuvc = [[TSUserViewController alloc] initWithNibName:nil bundle:nil];
+    TSViewController *tvc = [[TSViewController alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:tvc];
+    IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:nc leftViewController:tuvc];
+    deckController.panningMode = IIViewDeckFullViewPanning;
+    deckController.leftSize = 50;
+    self.window.rootViewController = deckController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
