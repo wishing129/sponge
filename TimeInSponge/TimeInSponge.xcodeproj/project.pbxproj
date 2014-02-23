@@ -169,28 +169,11 @@
 		0C6A77AF18B9F3C500AF1B42 /* TimeInSponge */ = {
 			isa = PBXGroup;
 			children = (
-				0C6A782A18BA9E8000AF1B42 /* AppUtil.h */,
-				0C6A782B18BA9E8000AF1B42 /* AppUtil.m */,
-				0C6A782C18BA9E8000AF1B42 /* EventBriefInfoModel.h */,
-				0C6A782D18BA9E8000AF1B42 /* EventBriefInfoModel.m */,
-				0C6A782E18BA9E8000AF1B42 /* EventBriefInfoTableView.h */,
-				0C6A782F18BA9E8000AF1B42 /* EventBriefInfoTableView.m */,
-				0C6A783018BA9E8000AF1B42 /* EventBriefInfoTableViewCell.h */,
-				0C6A783118BA9E8000AF1B42 /* EventBriefInfoTableViewCell.m */,
-				0C6A783218BA9E8000AF1B42 /* EventBriefInfoTableViewCell.xib */,
-				0C6A783318BA9E8000AF1B42 /* EventDetailViewController.h */,
-				0C6A783418BA9E8000AF1B42 /* EventDetailViewController.m */,
-				0C6A783518BA9E8000AF1B42 /* icon.png */,
-				0C6A783618BA9E8000AF1B42 /* TSTableView.h */,
-				0C6A783718BA9E8000AF1B42 /* TSTableView.m */,
-				0C6A783818BA9E8000AF1B42 /* TSTableViewCell.h */,
-				0C6A783918BA9E8000AF1B42 /* TSTableViewCell.m */,
-				0C6A783A18BA9E8000AF1B42 /* TSViewController.h */,
-				0C6A783B18BA9E8000AF1B42 /* TSViewController.m */,
-				0C6A781E18B9F76400AF1B42 /* TestViewController.h */,
-				0C6A781F18B9F76400AF1B42 /* TestViewController.m */,
-				0C6A782718B9F8D500AF1B42 /* TSUserViewController.h */,
-				0C6A782818B9F8D500AF1B42 /* TSUserViewController.m */,
+				0CB4DC0D18BAAB4D00E7D2B5 /* Image */,
+				0CB4DC0C18BAAB2900E7D2B5 /* Xib */,
+				0CB4DC0B18BAAB2500E7D2B5 /* View */,
+				0CB4DC0A18BAAB1F00E7D2B5 /* Model */,
+				0CB4DC0918BAAB1800E7D2B5 /* Controller */,
 				0C6A77B818B9F3C500AF1B42 /* AppDelegate.h */,
 				0C6A77B918B9F3C500AF1B42 /* AppDelegate.m */,
 				0C6A77BB18B9F3C500AF1B42 /* Images.xcassets */,
@@ -265,6 +248,63 @@
 				0C6A77EB18B9F41F00AF1B42 /* IIWrapController.m */,
 			);
 			path = ViewDeck;
+			sourceTree = "<group>";
+		};
+		0CB4DC0918BAAB1800E7D2B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0C6A783318BA9E8000AF1B42 /* EventDetailViewController.h */,
+				0C6A783418BA9E8000AF1B42 /* EventDetailViewController.m */,
+				0C6A783A18BA9E8000AF1B42 /* TSViewController.h */,
+				0C6A783B18BA9E8000AF1B42 /* TSViewController.m */,
+				0C6A781E18B9F76400AF1B42 /* TestViewController.h */,
+				0C6A781F18B9F76400AF1B42 /* TestViewController.m */,
+				0C6A782718B9F8D500AF1B42 /* TSUserViewController.h */,
+				0C6A782818B9F8D500AF1B42 /* TSUserViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0CB4DC0A18BAAB1F00E7D2B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C6A782A18BA9E8000AF1B42 /* AppUtil.h */,
+				0C6A782B18BA9E8000AF1B42 /* AppUtil.m */,
+				0C6A782C18BA9E8000AF1B42 /* EventBriefInfoModel.h */,
+				0C6A782D18BA9E8000AF1B42 /* EventBriefInfoModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0CB4DC0B18BAAB2500E7D2B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C6A782E18BA9E8000AF1B42 /* EventBriefInfoTableView.h */,
+				0C6A782F18BA9E8000AF1B42 /* EventBriefInfoTableView.m */,
+				0C6A783018BA9E8000AF1B42 /* EventBriefInfoTableViewCell.h */,
+				0C6A783118BA9E8000AF1B42 /* EventBriefInfoTableViewCell.m */,
+				0C6A783618BA9E8000AF1B42 /* TSTableView.h */,
+				0C6A783718BA9E8000AF1B42 /* TSTableView.m */,
+				0C6A783818BA9E8000AF1B42 /* TSTableViewCell.h */,
+				0C6A783918BA9E8000AF1B42 /* TSTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0CB4DC0C18BAAB2900E7D2B5 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				0C6A783218BA9E8000AF1B42 /* EventBriefInfoTableViewCell.xib */,
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
+		0CB4DC0D18BAAB4D00E7D2B5 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				0C6A783518BA9E8000AF1B42 /* icon.png */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,6 +626,7 @@
 				0C6A77D418B9F3C500AF1B42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C6A77D518B9F3C500AF1B42 /* Build configuration list for PBXNativeTarget "TimeInSpongeTests" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +635,7 @@
 				0C6A77D718B9F3C500AF1B42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
