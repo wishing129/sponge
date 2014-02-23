@@ -5,6 +5,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.timeinsponge.meeting.object.Event;
+
 /**
  * Root resource (exposed at "myresource/meeting" path)
  */
@@ -19,7 +21,15 @@ public class Meeting {
      */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getIt() {
-        return "Meetings!";
+    public Event getIt() {
+    	Event e = Event.getAnEvent();
+    	return e;
+    }
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Event getEvent() {
+    	
+    	Event e = Event.getAnEvent();
+    	return e;
     }
 }
