@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AppUtil.h"
 #import "TestViewController.h"
 #import "TSUserViewController.h"
 #import "TSViewController.h"
@@ -20,7 +21,7 @@
     TSUserViewController *tuvc = [[TSUserViewController alloc] initWithNibName:nil bundle:nil];
     TSViewController *tvc = [[TSViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:tvc];
-    nc.view.backgroundColor = [UIColor whiteColor];
+    [self configureNavigationBar:nc];
     IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:nc leftViewController:tuvc];
     deckController.panningMode = IIViewDeckFullViewPanning;
     deckController.leftSize = 50;
@@ -28,6 +29,20 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)configureNavigationBar:(UINavigationController *)nc {
+    nc.view.backgroundColor = [UIColor whiteColor];
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
+    shadow.shadowOffset = CGSizeMake(0, -1);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           c_blackColor, NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"Alegreya Sans SC" size:21.0], NSFontAttributeName, nil]];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBarBg.png"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTintColor:c_blackColor];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

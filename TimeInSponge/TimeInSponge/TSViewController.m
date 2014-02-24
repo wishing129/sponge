@@ -31,7 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = c_grayColor;
     [self setupModel];
     [self setupUI];
     [self reloadData];
@@ -63,17 +63,18 @@
 }
 
 - (void)createTableView {
-    self.eventBriefInfoTableView = [[EventBriefInfoTableView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 280.0f, 400.0f) style:UITableViewStylePlain];
+    self.eventBriefInfoTableView = [[EventBriefInfoTableView alloc] initWithFrame:eventsTableSize style:UITableViewStylePlain];
     self.eventBriefInfoTableView.delegate = self.eventBriefInfoModel;
     self.eventBriefInfoTableView.dataSource = self.eventBriefInfoModel;
-    self.eventBriefInfoTableView.center = self.view.center;
+    self.eventBriefInfoTableView.center = eventsTableStartCenter;
+    self.eventBriefInfoTableView.backgroundColor = c_grayColor;
     [self.view addSubview:self.eventBriefInfoTableView];
 }
 
 - (void)createNavigationBar {
-    self.title = @"Main page";
+    self.title = @"SPONGE";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(userButtonPressed:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed:)];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(userButtonPressed:)];
 }
 
 - (void)createDatePicker {

@@ -9,7 +9,8 @@
 #import "TSTableViewCell.h"
 
 @interface EventBriefInfoTableViewCell : TSTableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *icon;
+@property (weak, nonatomic) IBOutlet UIImageView *detailIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *eventProfileIcon;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *brief;
 @end
