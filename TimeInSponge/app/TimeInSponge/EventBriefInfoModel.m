@@ -61,6 +61,7 @@
     cell.title.text = [event objectForKey:@"title"];
     cell.title.textColor = c_blackColor;
     cell.brief.text = [event objectForKey:@"description"];
+    cell.brief.numberOfLines = 2;
     cell.brief.textColor = c_grayColor;
     
     return cell;

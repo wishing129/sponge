@@ -40,7 +40,6 @@
 		0C6A784418BA9E8100AF1B42 /* TSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A783918BA9E8000AF1B42 /* TSTableViewCell.m */; };
 		0C6A784518BA9E8100AF1B42 /* TSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A783B18BA9E8000AF1B42 /* TSViewController.m */; };
 		0CB4DC1B18BAB1E600E7D2B5 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC1A18BAB1E600E7D2B5 /* bg.png */; };
-		0CB4DC3F18BAEB8800E7D2B5 /* AlegreyaSansSC-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC3618BAEB8800E7D2B5 /* AlegreyaSansSC-Thin.ttf */; };
 		0CB4DC4018BAEB8800E7D2B5 /* bug-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC3718BAEB8800E7D2B5 /* bug-512.png */; };
 		0CB4DC4118BAEB8800E7D2B5 /* cat-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC3818BAEB8800E7D2B5 /* cat-512.png */; };
 		0CB4DC4218BAEB8800E7D2B5 /* duck-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC3918BAEB8800E7D2B5 /* duck-512.png */; };
@@ -49,6 +48,7 @@
 		0CB4DC4518BAEB8800E7D2B5 /* pig-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC3C18BAEB8800E7D2B5 /* pig-512.png */; };
 		0CB4DC4618BAEB8800E7D2B5 /* sheep-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC3D18BAEB8800E7D2B5 /* sheep-512.png */; };
 		0CB4DC4718BAEB8800E7D2B5 /* sparrow-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC3E18BAEB8800E7D2B5 /* sparrow-512.png */; };
+		0CB4DC4A18BAEF6600E7D2B5 /* AlegreyaSansSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4DC4918BAEF6600E7D2B5 /* AlegreyaSansSC-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +118,6 @@
 		0C6A783A18BA9E8000AF1B42 /* TSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSViewController.h; sourceTree = "<group>"; };
 		0C6A783B18BA9E8000AF1B42 /* TSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSViewController.m; sourceTree = "<group>"; };
 		0CB4DC1A18BAB1E600E7D2B5 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		0CB4DC3618BAEB8800E7D2B5 /* AlegreyaSansSC-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Thin.ttf"; sourceTree = "<group>"; };
 		0CB4DC3718BAEB8800E7D2B5 /* bug-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bug-512\U001e.png"; sourceTree = "<group>"; };
 		0CB4DC3818BAEB8800E7D2B5 /* cat-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat-512\U001e.png"; sourceTree = "<group>"; };
 		0CB4DC3918BAEB8800E7D2B5 /* duck-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "duck-512\U001e.png"; sourceTree = "<group>"; };
@@ -127,6 +126,7 @@
 		0CB4DC3C18BAEB8800E7D2B5 /* pig-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-512\U001e.png"; sourceTree = "<group>"; };
 		0CB4DC3D18BAEB8800E7D2B5 /* sheep-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sheep-512\U001e.png"; sourceTree = "<group>"; };
 		0CB4DC3E18BAEB8800E7D2B5 /* sparrow-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sparrow-512\U001e.png"; sourceTree = "<group>"; };
+		0CB4DC4918BAEF6600E7D2B5 /* AlegreyaSansSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,7 +348,7 @@
 		0CB4DC4818BAEB8D00E7D2B5 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				0CB4DC3618BAEB8800E7D2B5 /* AlegreyaSansSC-Thin.ttf */,
+				0CB4DC4918BAEF6600E7D2B5 /* AlegreyaSansSC-Regular.ttf */,
 			);
 			name = Font;
 			sourceTree = "<group>";
@@ -430,13 +430,13 @@
 			files = (
 				0CB4DC1B18BAB1E600E7D2B5 /* bg.png in Resources */,
 				0C6A784218BA9E8100AF1B42 /* icon.png in Resources */,
+				0CB4DC4A18BAEF6600E7D2B5 /* AlegreyaSansSC-Regular.ttf in Resources */,
 				0CB4DC4118BAEB8800E7D2B5 /* cat-512.png in Resources */,
 				0C6A77B418B9F3C500AF1B42 /* InfoPlist.strings in Resources */,
 				0CB4DC4618BAEB8800E7D2B5 /* sheep-512.png in Resources */,
 				0C6A784018BA9E8100AF1B42 /* EventBriefInfoTableViewCell.xib in Resources */,
 				0CB4DC4018BAEB8800E7D2B5 /* bug-512.png in Resources */,
 				0CB4DC4518BAEB8800E7D2B5 /* pig-512.png in Resources */,
-				0CB4DC3F18BAEB8800E7D2B5 /* AlegreyaSansSC-Thin.ttf in Resources */,
 				0CB4DC4418BAEB8800E7D2B5 /* navigationBarBg.png in Resources */,
 				0CB4DC4218BAEB8800E7D2B5 /* duck-512.png in Resources */,
 				0C6A77BC18B9F3C500AF1B42 /* Images.xcassets in Resources */,
