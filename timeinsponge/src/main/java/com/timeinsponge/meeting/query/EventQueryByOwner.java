@@ -18,8 +18,7 @@ public class EventQueryByOwner implements EventQuery {
 
 	@Override
 	public boolean specified(Event e) {
-		// TODO Auto-generated method stub
-		return false;
+		return e.getOwnerId().equals(ownerId);
 	}
 
 }

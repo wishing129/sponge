@@ -16,26 +16,27 @@ public class EventRepositoryDummyImpl implements EventRepository {
 
 	private static List<Event> events = new ArrayList<Event>();
 	static {
+		
 		Event e1 = Event.buildEvent().setTitle("Art Social")
 				.setDescription("Do some art and have a beer")
 				.setLocation("100 2nd St, Santa Clara, CA")
 				.setType(EventType.SOCIAL)
-				.setOwner(User.getOwner())
-				.setEventId(Utils.generateRandomString(10));
+				.setOwnerId("abcdefg")
+				.setEventId("ababababab");
 		
 		Event e2 = Event.buildEvent().setTitle("Elastic Search")
 				.setDescription("elastic search study group")
 				.setLocation("500 Market St., San Francisco, CA")
 				.setType(EventType.TECH_TALK)
-				.setOwner(User.getOwner())
-				.setEventId(Utils.generateRandomString(10));
+				.setOwnerId("abcdefg")
+				.setEventId("cdcdcdcdcd");
 
 		Event e3 = Event.buildEvent().setTitle("Mexican food")
 				.setDescription("Grab some mexican food with friends")
 				.setLocation("126 Shattuck Ave., Berkeley, CA")
 				.setType(EventType.DINNER)
-				.setOwner(User.getOwner())
-				.setEventId(Utils.generateRandomString(10));
+				.setOwnerId("abcdefg")
+				.setEventId("efefefefef");
 		
 		events.add(e1);
 		events.add(e2);
@@ -58,8 +59,15 @@ public class EventRepositoryDummyImpl implements EventRepository {
 	}
 
 	@Override
-	public List<Event> getEventList(EventQuery query) {
-		return events;
+	public List<Event> getEvents(EventQuery query) {
+		
+		List<Event> results = new ArrayList<Event>();	
+		for(Event e : events) {
+			if(query.specified(e)) {
+				results.add(e);
+			}
+		}
+		return results;
 	}
 
 }

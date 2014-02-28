@@ -1,7 +1,6 @@
 package com.timeinsponge.meeting.repository;
 
 
-import java.util.Collection;
 import java.util.List;
 
 import com.timeinsponge.meeting.object.Event;
@@ -13,5 +12,5 @@ public interface EventRepository {
 	void removeEvent(Event e);
 	void updateEvent(Event e);
 	
-	List<Event> getEventList(EventQuery query);
+	List<Event> getEvents(EventQuery query);
 }

@@ -6,11 +6,13 @@ public class Event {
 	
 	private String eventId;
 	private EventType type;
-	private User owner;
+	private String ownerId;
 	private String title;
 	private String description;
 	private String location;
 	private List<EventUser> participants;
+
+	transient private User owner;
 	
 	public static Event buildEvent() {
 		return new Event();
@@ -39,13 +41,13 @@ public class Event {
 	}
 
 
-	public User getOwner() {
-		return owner;
+	public String getOwnerId() {
+		return ownerId;
 	}
 
 
-	public Event setOwner(User owner) {
-		this.owner = owner;
+	public Event setOwnerId(String ownerId) {
+		this.ownerId = ownerId;
 		return this;
 	}
 
